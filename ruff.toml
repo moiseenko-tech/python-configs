@@ -101,7 +101,11 @@ select = [
     "DOC",      # pydoclint
     "RUF",      # Ruff-specific rules
 ]
-ignore = []
+
+ignore = [
+    "D417",     # On top of the Google convention, disable `D417`, which requires
+                # documentation for every function parameter.
+]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
@@ -109,6 +113,9 @@ unfixable = []
 
 # Only ignore unused variables named "_".
 dummy-variable-rgx = "^_$"
+
+[lint.docstyle]
+convention = "google"
 
 [format]
 # Like Black, use double quotes for strings.
