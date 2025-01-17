@@ -114,7 +114,7 @@ unfixable = []
 # Only ignore unused variables named "_".
 dummy-variable-rgx = "^_$"
 
-[lint.docstyle]
+[lint.pydocstyle]
 convention = "google"
 
 [format]
